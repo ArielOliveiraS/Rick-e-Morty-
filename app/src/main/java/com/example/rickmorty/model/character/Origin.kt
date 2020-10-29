@@ -1,4 +1,4 @@
-package com.example.rickmorty.model
+package com.example.rickmorty.model.character
 
 data class Origin (
     val name: String,

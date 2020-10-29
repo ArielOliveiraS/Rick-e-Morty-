@@ -1,20 +1,25 @@
 package com.example.rickmorty.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.rickmorty.R
-import com.example.rickmorty.model.Results
+import com.example.rickmorty.model.character.Characters
 import com.example.rickmorty.viewmodel.CharacterViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+const val ID = "id"
+const val EPISODES_ID = "episodesId"
 
-    private val list = mutableListOf<Results>()
-    private val adapter = CharacterRecyclerViewAdapter(list)
+class MainActivity : AppCompatActivity(), CharacterViewContract {
+
+    private val list = mutableListOf<Characters>()
+    private val adapter = CharacterRecyclerViewAdapter(list, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,5 +34,12 @@ class MainActivity : AppCompatActivity() {
         viewModel.characterResult.observe(this, Observer {
             adapter.updateList(it.results)
         })
+
+    }
+
+    override fun loadCharacterDetail(character: Characters) {
+        val intent1 = Intent(this, DetailActivity::class.java)
+        intent1.putExtra(ID, character.id)
+        startActivity(intent1)
     }
 }

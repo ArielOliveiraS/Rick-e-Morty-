@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rickmorty.R
-import com.example.rickmorty.model.Results
+import com.example.rickmorty.model.character.Characters
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_character.view.*
 
-class CharacterRecyclerViewAdapter(var list: MutableList<Results>):
+class CharacterRecyclerViewAdapter(var list: MutableList<Characters>, val viewContract: CharacterViewContract):
         RecyclerView.Adapter<CharacterRecyclerViewAdapter.ViewHolder>(){
 
 
@@ -26,9 +26,12 @@ class CharacterRecyclerViewAdapter(var list: MutableList<Results>):
         val characters = list[position]
         holder.onBind(characters)
 
+        holder.itemView.setOnClickListener {
+            viewContract.loadCharacterDetail(characters)
+        }
     }
 
-    fun updateList(newList: MutableList<Results>) {
+    fun updateList(newList: MutableList<Characters>) {
         this.list.removeAll(list)
         if (newList != null) {
             this.list = newList
@@ -37,7 +40,7 @@ class CharacterRecyclerViewAdapter(var list: MutableList<Results>):
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun onBind(character: Results) {
+        fun onBind(character: Characters) {
             itemView.characterName.text = character.name
             Picasso.get().load(character.image).into(itemView.characterImageView)
         }

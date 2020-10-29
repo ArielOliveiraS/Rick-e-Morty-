@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/xlarge_margin">
+
+
+            <ImageView
+                android:id="@+id/movieImageDetail1"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+
+            <TextView
+                android:id="@+id/movieTitleDetails1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Titulo"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/xlarge_text"
+                app:layout_constraintEnd_toEndOf="@+id/movieImageDetail1"
+                app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintStart_toStartOf="@+id/movieImageDetail1"
+                app:layout_constraintTop_toBottomOf="@+id/movieImageDetail1" /><![CDATA[
+
+
+
+            " />
+
+
+
+
+
+
+
+            ]]>
+
+            <TextView
+                android:id="@+id/movieDurationDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/duration"
+                android:textColor="@color/colorYellow"
+                android:textSize="@dimen/small_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieTitleDetails1" />
+
+            <TextView
+                android:id="@+id/movieReleaseYearDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/release_year"
+                android:textColor="@color/colorYellow"
+                android:textSize="@dimen/small_text"
+                app:layout_constraintStart_toStartOf="@+id/movieDurationDetail1"
+                app:layout_constraintTop_toBottomOf="@+id/movieDurationDetail1" />
+
+            <TextView
+                android:id="@+id/movieOverview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/xlarge_margin"
+                android:layout_marginVertical="@dimen/large_margin"
+                android:layout_marginTop="16dp"
+                android:text="@string/overview"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieReleaseYearDetail1" />
+
+            <Button
+                android:id="@+id/characterListButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/character_list"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieOverview1"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">RickMorty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title">Uma seleção de filmes imperdiveis:</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="duration">Duration</string>
+    <string name="release_year">Release Year</string>
+    <string name="overview">Overview</string>
+    <string name="download">Baixar</string>
+    <string name="whatch">Assistir</string>
+
+
+    <string name="character_list">Lista de Episódios com %1$s</string>
+
 </resources>

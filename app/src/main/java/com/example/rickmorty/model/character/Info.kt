@@ -1,4 +1,4 @@
-package com.example.rickmorty.model
+package com.example.rickmorty.model.character
 
 /**
  * Created by arieloliveira on 30/09/20 for RickMorty.

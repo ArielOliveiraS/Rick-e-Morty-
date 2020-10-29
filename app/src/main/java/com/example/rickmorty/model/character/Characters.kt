@@ -1,10 +1,13 @@
-package com.example.rickmorty.model
+package com.example.rickmorty.model.character
+
+import com.example.rickmorty.model.character.Location
+import com.example.rickmorty.model.character.Origin
 
 
 /**
  * Created by arieloliveira on 30/09/20 for RickMorty.
  */
-data class Results (
+data class Characters (
     val id: Int,
     val name: String,
     val status: String,
@@ -14,7 +17,7 @@ data class Results (
     val origin: Origin,
     val location: Location,
     val image: String?,
-    val episode: List<String>,
+    val episode: ArrayList<String>,
     val url: String,
     val created: String
 )
