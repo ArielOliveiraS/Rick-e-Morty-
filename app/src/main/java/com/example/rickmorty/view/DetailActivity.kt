@@ -30,11 +30,11 @@ class DetailActivity : AppCompatActivity() {
         viewModel.characterDetail.observe(this, Observer {
             Picasso.get().load(it.image).into(movieImageDetail1)
             movieTitleDetails1.text = it.name
-            movieDurationDetail1.text = it.species
-            movieReleaseYearDetail1.text = it.status
-            movieOverview1.text = it.location.name
+            movieDurationDetail1.text = resources.getString(R.string.specie, it.species)
+            movieReleaseYearDetail1.text = resources.getString(R.string.status, it.status)
+            movieOverview1.text = resources.getString(R.string.planet, it.location.name)
 
-            characterListButton.text = resources.getString(R.string.character_list, it.name)
+            characterListButton.text = resources.getString(R.string.character_list)
 
             val episodes = it.episode.map {
                 it.replace("https://rickandmortyapi.com/api/episode/", "")

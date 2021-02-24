@@ -6,12 +6,13 @@ import com.example.rickmorty.model.character.Episode
 import com.example.rickmorty.model.location.PlanetResult
 import io.reactivex.Single
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiRickMorty {
     @GET("character/")
-    fun getCharacter(): Single<CharactersResult>
+    fun getCharacter(@Query("page") pages: String): Single<CharactersResult>
 
     @GET("character/{id}")
     fun getCharacterId(@Path("id") id: Int): Single<Characters>

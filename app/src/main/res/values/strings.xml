@@ -12,6 +12,9 @@
     <string name="whatch">Assistir</string>
 
 
-    <string name="character_list">Lista de Episódios com %1$s</string>
+    <string name="character_list">Lista de Episódios</string>
+    <string name="specie">Espécie: %1$s</string>
+    <string name="status">Status: %1$s</string>
+    <string name="planet">Planeta: %1$s</string>
 
 </resources>

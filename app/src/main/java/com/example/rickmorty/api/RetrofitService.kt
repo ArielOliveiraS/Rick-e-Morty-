@@ -10,7 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 const val BASE_URL = "https://rickandmortyapi.com/api/"
 
-
 class RetrofitService {
     companion object {
         val service: ApiRickMorty

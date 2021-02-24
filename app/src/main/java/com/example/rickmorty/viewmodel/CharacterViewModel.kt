@@ -26,9 +26,9 @@ class CharacterViewModel: ViewModel() {
 
     val locationResult: MutableLiveData<PlanetResult> = MutableLiveData()
 
-    fun getAllCharacters() {
+    fun getAllCharacters(page: String) {
         disposable.add(
-            RetrofitService.service.getCharacter()
+            RetrofitService.service.getCharacter(page)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
